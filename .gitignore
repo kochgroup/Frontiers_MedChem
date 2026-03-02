@@ -1,0 +1,4 @@
+# Ignore priors
+/priors
+# Ignore data
+/data

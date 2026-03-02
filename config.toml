@@ -1,5 +1,12 @@
-# Maize workflow configuration file
-# Copy to config.toml and adjust the paths for your system
-#[run_gold]
-#scripts.run_gold.interpreter = "~/miniforge3/envs/ENV_NAME/bin/python"
-#scripts.run_gold.location = "./scripts/run_gold.py"
+
+[golddocking]
+scripts.run_gold.interpreter = "/nfs/home/myuecel3/miniforge3/envs/frontiers_medchem/bin/python"
+scripts.run_gold.location = "/nfs/home/myuecel3/Frontiers_MedChem/scripts/gold_docking.py"
+
+[reinvent]
+scripts.reinvent.interpreter = "/nfs/home/myuecel3/miniforge3/envs/frontiers_medchem/bin/python"
+scripts.reinvent.location = "/nfs/home/myuecel3/miniforge3/envs/frontiers_medchem/bin/reinvent"
+
+[maize]
+scripts.maize.interpreter = "/nfs/home/myuecel3/miniforge3/envs/frontiers_medchem/bin/python"
+scripts.maize.location = "/nfs/home/myuecel3/miniforge3/envs/frontiers_medchem/bin/maize"

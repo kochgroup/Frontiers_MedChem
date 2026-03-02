@@ -15,3 +15,22 @@ Reinvent Errors:
 - tensorboard error "no module named pkg_resources"
 Solution: This error indicates that the pkg_resources module is not found. To resolve this issue, you can try the following steps:
 1. pip install "setuptools<82"
+- pydantic errors "pydantic_core._pydantic_core.ValidationError: 1 validation error for Parameters" and "maize.utilities.execution.ProcessError: Command /nfs/home/myuecel3/miniforge3/envs/frontiers_medchem/bin/python /nfs/home/myuecel3/miniforge3/envs/frontiers_medchem/bin/reinvent --log-filename reinvent.log -f toml config.toml failed with returncode 1"
+Solution: Add this line the _path_config function in 'user/miniforge3/envs/frontiers_medchem/lib/python3.10/site-packages/maize/steps/mai/misc/reinvent.py'
+    score_conf = {
+        "name": "maize",
+        "weight": weight,
+        "params": {
+            "executable": "./intercept.py",
+            "args": "",
+            "property": "predictions", # this line was added by me
+        }
+
+CSD-Python-Api Errors:
+- Mogul initialisation error. the paths has to be adjusted according below. Additionally, you may need to add gold folder dir and and mogul data, see below
+
+Solutuin: CCDC_MOGUL_INITIALISATION_FILE='/nfs/home/myuecel3/miniforge3/envs/frontiers_medchem/lib/python3.10/site-packages/ccdc/parameter_files/mogul.ini'
+os.environ['CCDC_MOGUL_INITIALISATION_FILE'] = CCDC_MOGUL_INITIALISATION_FILE
+GOLD_DIR=/appl/ccdc/CSDS2022/Discovery_2022/GOLD
+CCDC_MOGUL_DATA=/appl/ccdc/CSDS2022/CSD_2022/data
+
