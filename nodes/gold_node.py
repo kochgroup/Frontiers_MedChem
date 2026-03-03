@@ -7,8 +7,8 @@ import os
 import sys
 
 from maize.utilities.chem import (IsomerCollection, Isomer, load_sdf_library,save_sdf_library,merge_isomers)
-
-
+from rdkit import Chem
+from rdkit.Chem import Descriptors
 from maize.core.node import Node
 from maize.core.interface import Input, Output, Parameter
 from pathlib import Path
@@ -25,6 +25,8 @@ class GOLDDocking(Node):
     inp: Input[Path] = Input()
     protein_file: Parameter[Path] = Parameter()
     ref_ligand: Parameter[Path] = Parameter()
+    max_conformers: Parameter[int] = Parameter(default=10)
+    scoring_function: Parameter[str] = Parameter(default='plp')
     output_file: FileParameter[Path] = FileParameter()
     out: Output[list[IsomerCollection]] = Output() 
     
@@ -33,8 +35,10 @@ class GOLDDocking(Node):
         protein_file = self.protein_file.value
         ref_ligand = self.ref_ligand.value
         output_file = self.output_file.filepath
-        
-        command = f"{self.runnable['run_gold']} --p {protein_file} --r {ref_ligand} --l {ligand_path} --o {output_file}"
+        max_conformers = self.max_conformers.value
+        scoring_function = self.scoring_function.value
+
+        command = f"{self.runnable['run_gold']} --p {protein_file} --r {ref_ligand} --l {ligand_path} --o {output_file} --max_conformers {max_conformers} --scoring_function {scoring_function}"
         res = self.run_command(command)
         
         input_mols = load_sdf_library(ligand_path)
@@ -71,13 +75,18 @@ class GOLDDocking(Node):
             for i, mol in enumerate(input_mols):
                 if i < len(scores):
                     for isomer in mol.molecules:
+                        smiles = isomer.to_smiles()
+                        mw = Descriptors.HeavyAtomMolWt(Chem.MolFromSmiles(smiles))
                         isomer.set_tag("docking_score", scores[i])
-                        isomer.add_score("docking_score", scores[i], agg="min")
+                        isomer.set_tag("Mol_Wt", mw)
+                    
                     result_mols.append(mol)
                 else:
                     for isomer in mol.molecules:
+                        smiles = isomer.to_smiles()
+                        mw = Descriptors.HeavyAtomMolWt(Chem.MolFromSmiles(smiles))
                         isomer.set_tag("docking_score", 0.0)
-                        isomer.add_score("docking_score", 0.0, agg="min")
+                        isomer.set_tag("Mol_Wt", mw)
                     result_mols.append(mol)
                     
             # Try to load docked conformations if available

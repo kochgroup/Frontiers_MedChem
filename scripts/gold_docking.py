@@ -9,7 +9,7 @@ import os
 
 
 
-def gold_docking(protein_file, ref_ligand_file, ligand_file, output_dir):
+def gold_docking(protein_file, ref_ligand_file, ligand_file, output_dir, max_conformers=10, scoring_function='plp'):
     # Create output directory if it doesn't exist
     os.makedirs(output_dir, exist_ok=True)
     
@@ -37,7 +37,7 @@ def gold_docking(protein_file, ref_ligand_file, ligand_file, output_dir):
             lig_prep.add_hydrogens = True
             lig_prep.add_charges = True
             lig_prep.add_torsions = True
-            lig_prep.max_conformers = 10
+            lig_prep.max_conformers = max_conformers
             
             prep_lig = lig_prep.prepare(ligand_entry)
             
@@ -53,7 +53,7 @@ def gold_docking(protein_file, ref_ligand_file, ligand_file, output_dir):
             settings.add_protein_file(protein_file)
             settings.torsion_distribution_file = '/appl/ccdc/CSDS2022/Discovery_2022/GOLD/gold/gold.tordist'
             settings.binding_site = settings.BindingSiteFromLigand(protein_mol, ref_ligand_mol, 8)
-            settings.fitness_function = 'plp'
+            settings.fitness_function = scoring_function
             settings.autoscale = 10.
             
             # Set up output
@@ -96,8 +96,11 @@ if __name__ == '__main__':
     parser.add_argument('--r', type=str, required=True, help="Path to the reference ligand file.")
     parser.add_argument('--l', type=str, required=True, help="Path to the ligand file (SDF with multiple molecules).")
     parser.add_argument('--o', type=str, required=True, help="Path to the output directory.")
+    parser.add_argument('--max_conformers', type=int, default=10, help="Maximum number of conformers to generate.")
+    parser.add_argument('--scoring_function', type=str, default='plp', help="Scoring function to use.")
+
     args = parser.parse_args()
     
-    scores = gold_docking(args.p, args.r, args.l, args.o)
+    scores = gold_docking(args.p, args.r, args.l, args.o, args.max_conformers, args.scoring_function)
 
     print(f"Fitness scores: {','.join(str(score) for score in scores)}")

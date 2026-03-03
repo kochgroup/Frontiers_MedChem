@@ -1,0 +1,13 @@
+README.md
+setup.py
+workshop_setup.py
+frontiers_medchem.egg-info/PKG-INFO
+frontiers_medchem.egg-info/SOURCES.txt
+frontiers_medchem.egg-info/dependency_links.txt
+frontiers_medchem.egg-info/top_level.txt
+nodes/__init__.py
+nodes/gold_node.py
+nodes/save_isomers.py
+nodes/score_converter.py
+scripts/__init__.py
+scripts/gold_docking.py
