@@ -53,4 +53,4 @@ pip install -e .
 # References
 
 1. Loeffler, H.H., He, J., Tibo, A. et al. Reinvent 4: Modern AI–driven generative molecule design.  J Cheminform 16, 20 (2024). [https://doi.org/10.1186/s13321-024-00812-5](https://doi.org/10.1186/s13321-024-00812-5)
-2. Verdonk ML, Cole JC, Hartshorn MJ, Murray CW, Taylor RD. Improved protein-ligand docking using GOLD. Proteins. 2003, 52, 609-23. doi: [10.1002/prot.10465](10.1002/prot.10465)
+2. Verdonk ML, Cole JC, Hartshorn MJ, Murray CW, Taylor RD. Improved protein-ligand docking using GOLD. Proteins. 2003, 52, 609-23. doi: [https://doi.org/10.1002/prot.10465](https://doi.org/10.1002/prot.10465)
