@@ -25,7 +25,7 @@ class GOLDDocking(Node):
     inp: Input[Path] = Input()
     protein_file: Parameter[Path] = Parameter()
     ref_ligand: Parameter[Path] = Parameter()
-    max_conformers: Parameter[int] = Parameter(default=10)
+    ndocking: Parameter[int] = Parameter(default=10)
     scoring_function: Parameter[str] = Parameter(default='plp')
     output_file: FileParameter[Path] = FileParameter()
     out: Output[list[IsomerCollection]] = Output() 
@@ -35,10 +35,10 @@ class GOLDDocking(Node):
         protein_file = self.protein_file.value
         ref_ligand = self.ref_ligand.value
         output_file = self.output_file.filepath
-        max_conformers = self.max_conformers.value
+        ndocking = self.ndocking.value
         scoring_function = self.scoring_function.value
 
-        command = f"{self.runnable['run_gold']} --p {protein_file} --r {ref_ligand} --l {ligand_path} --o {output_file} --max_conformers {max_conformers} --scoring_function {scoring_function}"
+        command = f"{self.runnable['run_gold']} --p {protein_file} --r {ref_ligand} --l {ligand_path} --o {output_file} --ndocking {ndocking} --scoring_function {scoring_function}"
         res = self.run_command(command)
         
         input_mols = load_sdf_library(ligand_path)
