@@ -19,7 +19,7 @@ cd Frontiers_MedChem
 ```
 Step 2: Download the Prior Models
 
-In this repo, some prior models (reinvent and libinvent) of REINVENT4 are already uploaded but there more models provided by AstraZeneca. So if you need different models please visit the original ([REINVENT repo](https://github.com/MolecularAI/REINVENT4)).
+In this repo, some prior models (reinvent and libinvent) of REINVENT4 are already uploaded but there more models provided by AstraZeneca. So if you need different models please visit the original [REINVENT repo](https://github.com/MolecularAI/REINVENT4).
 You can find priors at Frontiers_MedChem/priors. If you download another model please move it in this directory. 
 
 Step 3: Environment Setup

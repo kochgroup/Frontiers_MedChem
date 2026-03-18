@@ -8,7 +8,7 @@ json_out_config = "_stage1.json"
 
 prior_file = "./priors/reinvent.prior"
 agent_file = "./priors/reinvent.prior"
-summary_csv_prefix = "stage_numrotbond"
+summary_csv_prefix = "stage_numrotbond"  # You can choose your own prefix for the output csv files, e.g. "stage_numrotbond"
 
 batch_size = 100
 
@@ -34,8 +34,8 @@ penalty_multiplier = 0.5         # penalty factor for PenalizeSameSmiles
 [[stage]]
 
 max_score = 1.0
-min_steps = 50
-max_steps = 300
+min_steps = 5
+max_steps = 10
 
 chkpt_file = 'numrotbond_reversesig.chkpt'
 
