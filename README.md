@@ -18,6 +18,7 @@ By the end of this session, you will learn how to:
 The tutorials are Jupyter notebooks in the ['tutorials'](tutorials/) directory. Run them in order. each builds on the previous one. 
 
 | Tutorial | Description |
+|---------|------|
 | **[1 - Hello Maize](tutorials/1-%20hello_maize.ipynb)** | Check maize installation, define a custom node (parameters, output), and run a simple workflow. |
 | **[2 - Maize Chemsitry](tutorials/2-%20maize_chem.ipynb)** | Load SMILES, and molecules, use RDKit descriptors and a custom 'CalcDesc' node within a Maize workflow. |
 | **[3 - CSD GOLD](tutorials/3-%20csd_gold.ipynb)** | Use CCDC Python API, load a protein, prepare it, define a binding site ... |
