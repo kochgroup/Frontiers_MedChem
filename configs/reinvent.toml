@@ -62,12 +62,3 @@ params.smarts = [
     "[#16;!s][C;!$(C(=[O,N])[N,O])][#16;!s]"
 ]
 
-[[stage.scoring.component]]
-[stage.scoring.component.ExternalProcess]
-
-[[stage.scoring.component.ExternalProcess.endpoint]]
-params.executable = "/nfs/home/myuecel3/creativity_project/.venv/bin/python"
-params.args = "/nfs/home/myuecel3/creativity_project/malte_obj.py"
-name="scores"
-params.property = "predictions"
-weight=1

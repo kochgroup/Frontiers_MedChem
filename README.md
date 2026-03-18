@@ -1,56 +1,39 @@
 # Frontiers in Medicinal Chemistry (2026): REINVENT4 & CSD GOLD Workshop
 
-Welcome to the workshop! This repository contains all the tutorials, scripts, and custom Maize nodes needed to link REINVENT4 de novo molecule generation with CCDC GOLD docking.
+This repository contains the **tutorials**, **scripts**, and **custom Maize Nodes** for [a workshop](https://veranstaltungen.gdch.de/microsite/index.cfm?l=11912&modus=) that links **REINVENT4** molecule generation tool with **CCDC GOLD** docking, using **Maize** as workflow manager. 
 
-## ⚠️ Prerequisites
-Before you begin, ensure you have:
-1. **Mamba** (or Conda) installed on your system.
-2. A valid **CCDC License** (required for the GOLD docking API).
-3. **Git** installed.
+## Workshop overview 
 
----
+By the end of this session, you will learn how to:
 
-## Step 1: Clone this Repository
-First, download the workshop materials to your local machine and enter the directory:
-
-``` bash
-git clone https://github.com/mehmetaliyucel/Frontiers_MedChem.git
-cd Frontiers_MedChem
-```
-Step 2: Download the Prior Models
-
-The REINVENT4 generators are too large for GitHub. Download generators that you want to use from Zenodo: https://zenodo.org/records/15641297 (This link may change in the future, always check from source)
-Extract the files and move all .prior files into the priors/ folder inside this repository:
-Frontiers_MedChem/priors/
-
-Step 3: Environment Setup
-
-We will use mamba to create the environment and install the required packages. Run these commands sequentially in your terminal:
-```bash
-# 1. Create and activate the base environment
-mamba create -n frontiers_medchem python=3.10 -y
-mamba activate frontiers_medchem
-
-# 2. Install the CSD Python API (Requires CCDC License) for more installation options please check the the website https://downloads.ccdc.cam.ac.uk/documentation/API/installation_notes.html#installation
-conda install --channel=https://conda.ccdc.cam.ac.uk csd-python-api
+* Build and run **Maize** workflows (nodes, parameters, and connections).
+* Explore useful chemistry functions within **maize-contrib**.
+* Master common tasks in the **CSD Python API** (protein preparation, defining binding sites, etc.).
+* Run **REINVENT4** to generate molecules and get comfortable with TOML configuration files.
+* Connect **REINVENT** and **GOLD** into a single, automated **Maize** pipeline: *Generation → Docking → Scoring → Feedback to REINVENT*.
 
 
-# 3. Install Maize and Maize-Contrib from GitHub
-pip install git+https://github.com/MolecularAI/maize.git
-pip install git+https://github.com/MolecularAI/maize-contrib.git
+## Tutorials 
 
-# 4. Install REINVENT4
-git clone https://github.com/MolecularAI/REINVENT4.git
-cd REINVENT4
-python install.py cpu
-cd ..
+The tutorials are Jupyter notebooks in the ['tutorials'](tutorials/) directory. Run them in order. each builds on the previous one. 
 
-# 6. Install the custom workshop package (Fixes Python import paths)
-# Make sure you are in the main Frontiers_MedChem folder when you run this!
-pip install -e .
-```
+| Tutorial | Description |
+| **[1 - Hello Maize](tutorials/1-%20hello_maize.ipynb)** | Check maize installation, define a custom node (parameters, output), and run a simple workflow. |
+| **[2 - Maize Chemsitry](tutorials/2-%20maize_chem.ipynb)** | Load SMILES, and molecules, use RDKit descriptors and a custom 'CalcDesc' node within a Maize workflow. |
+| **[3 - CSD GOLD](tutorials/3-%20csd_gold.ipynb)** | Use CCDC Python API, load a protein, prepare it, define a binding site ... |
+| **[4 - REINVENT4](tutorials/4-%20reinvent_tutorial.ipynb)** | Check REINVENT4 installation, configure reinforcement learning (prior, agent, scoring, sampling) |
+| **[5 - REINVENT + Maize + Gold](tutorials/5-%20reinvent_maize_gold.ipynb)** | The full pipeline with already created nodes. |
 
-# References
+## Getting started 
 
-1. Loeffler, H.H., He, J., Tibo, A. et al. Reinvent 4: Modern AI–driven generative molecule design.  J Cheminform 16, 20 (2024). [https://doi.org/10.1186/s13321-024-00812-5](https://doi.org/10.1186/s13321-024-00812-5)
-2. Verdonk ML, Cole JC, Hartshorn MJ, Murray CW, Taylor RD. Improved protein-ligand docking using GOLD. Proteins. 2003, 52, 609-23. doi: [https://doi.org/10.1002/prot.10465](https://doi.org/10.1002/prot.10465)
+1. **Install the environment**
+    Follow the instructions in **[installation.md](installation.md)** 
+2. **Run the tutorials** 
+    Open the notebooks in 'tutorials/' in order.
+3. **Upps, something went wrong!**
+    First of all, no worries. Luckily (for you), something went wrong for me as well, so check out **[potential_errors.md](potential_errors.md)**. See for common installation and runtime issues with potential solutions. If the error persists or the error is not listed, just look around you would see one of us hanging around there and we'll come rescue you. 
+
+## References
+1. Loeffler, H.H., He, J., Tibo, A. et al. Reinvent 4: Modern AI–driven generative molecule design. J Cheminform 16, 20 (2024). https://doi.org/10.1186/s13321-024-00812-5
+    
+2. Verdonk ML, Cole JC, Hartshorn MJ, Murray CW, Taylor RD. Improved protein-ligand docking using GOLD. Proteins. 2003, 52, 609-23. doi: https://doi.org/10.1002/prot.10465
