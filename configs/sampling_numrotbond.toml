@@ -1,0 +1,11 @@
+
+run_type = "sampling"
+device = "cpu"
+json_out_config = "_sampling.json"
+
+[parameters]
+model_file = "numrotbond_reversesig.chkpt" ##
+output_file = 'sampling_numrotbond.csv'
+num_smiles = 1200
+unique_molecules = true
+randomize_smiles = true

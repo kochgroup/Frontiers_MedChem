@@ -1,4 +1,11 @@
-# Ignore priors
-/priors
-# Ignore data
-/data
+# Ignore output data
+/data/output
+# Ignore logs
+/conformer_generator.log
+/conformer_generator_error.warn
+*.csv
+/scoring_*.csv
+/sampling_*.toml
+/sampling_*.csv
+/*.chkpt
+/*.log

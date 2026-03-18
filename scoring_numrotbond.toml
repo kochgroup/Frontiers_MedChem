@@ -1,0 +1,27 @@
+
+run_type = "scoring"
+json_out_config = "_scoring.json"
+
+[parameters]
+smiles_file = "sampling_numrotbond.csv"   #the path of sampled molecules
+output_csv = "scoring_numrotbond.csv"
+
+[scoring]
+type = "geometric_mean"
+
+[[scoring.component]]
+[scoring.component.GraphLength]
+[[scoring.component.GraphLength.endpoint]]
+name = "GraphLenght" #number of bonds in longest path
+weight = 0.2
+transform.type = "reverse_sigmoid"
+transform.high = 40
+transform.low = 20
+transform.k = 0.5
+
+######
+#  Add scoring functions as many as you want. Define the weights for each score function and tranform them properly.
+######
+
+
+
