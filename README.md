@@ -29,9 +29,20 @@ The tutorials are Jupyter notebooks in the ['tutorials'](tutorials/) directory. 
 
 1. **Install the environment**
     Follow the instructions in **[installation.md](installation.md)** 
-2. **Run the tutorials** 
-    Open the notebooks in 'tutorials/' in order.
-3. **Upps, something went wrong!**
+2. **Config File:**
+    Change the **[config.toml](/config.toml)**
+    To do this you migh need to know the directory of the conda environment.
+    If the environment is activated you can run this command to get the environment path on terminal:
+    ``` bash
+    echo $CONDA_PREFIX
+    ```
+    or if you need to get main conda directory:
+    ``` bash
+    conda info --base
+    ```
+3. **Run the tutorials** 
+    Open the notebooks in **[tutorials](/tutorials/)** in order.
+4. **Upps, something went wrong!**
     First of all, no worries. Luckily (for you), something went wrong for me as well, so check out **[potential_errors.md](potential_errors.md)**. See for common installation and runtime issues with potential solutions. If the error persists or the error is not listed, just look around you would see one of us hanging around there and we'll come rescue you. 
 
 ## References

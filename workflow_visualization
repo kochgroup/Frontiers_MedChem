@@ -1,0 +1,13 @@
+digraph reinvent_dock {
+	graph [bgcolor="#ffffff00"]
+	node [fillcolor="#66666622" fontname=Consolas fontsize=11 penwidth=2.0 shape=box style="rounded,filled"]
+	edge [color="#3f4444" fontname=Consolas fontsize=9 penwidth=2.0]
+	reinvent [label=reinvent color="#830051"]
+	smiles2molecules [label=smiles2molecules color="#830051"]
+	golddocking [label=golddocking color="#830051"]
+	scoreconverter [label=scoreconverter color="#830051"]
+	reinvent -> smiles2molecules [label="list[str]" color="#3f4444" fontname=Consolas fontsize=9 penwidth=2.0]
+	smiles2molecules -> golddocking [label="list[IsomerCollection]" color="#3f4444" fontname=Consolas fontsize=9 penwidth=2.0]
+	golddocking -> scoreconverter [label="list[IsomerCollection]" color="#3f4444" fontname=Consolas fontsize=9 penwidth=2.0]
+	scoreconverter -> reinvent [label=ndarray color="#3f4444" fontname=Consolas fontsize=9 penwidth=2.0]
+}

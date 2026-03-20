@@ -28,7 +28,7 @@ fi
 echo "################################################################################"
 echo "Installing additional packages"
 echo "################################################################################"
-pip install mols2grid graphviz
+pip install mols2grid graphviz matplotlib
 pip install ipython jupyter
 
 echo "################################################################################"

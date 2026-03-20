@@ -6,9 +6,9 @@ json_out_config = "_stage1.json"
 
 [parameters]
 
-prior_file = "priors/reinvent.prior"
-agent_file = "priors/reinvent.prior"
-summary_csv_prefix = "reinvent_rl"  # You can choose your own prefix for the output csv files, e.g. "stage_numrotbond"  instead of reinvent_rl
+prior_file = "/nfs/home/myuecel3/Frontiers_MedChem/priors/reinvent.prior"
+agent_file = "/nfs/home/myuecel3/Frontiers_MedChem/priors/reinvent.prior"
+summary_csv_prefix = "/nfs/home/myuecel3/Frontiers_MedChem/data/output/reinvent_rl"  # You can choose your own prefix for the output csv files, e.g. "stage_numrotbond"  instead of reinvent_rl
 
 batch_size = 64
 
