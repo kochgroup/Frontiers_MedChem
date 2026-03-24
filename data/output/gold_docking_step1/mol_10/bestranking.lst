@@ -1,0 +1,8 @@
+# File containing a listing of the fitness of the top-ranked
+# individual for each ligand docked in GOLD.
+#
+# Format is:
+#
+#     Score     S(PLP)   S(hbond)     S(cho)   S(metal)  DE(clash)   DE(tors)     intcor     time                               File name                Ligand name
+
+     65.12     -60.07       2.19       0.00       0.00       0.05       3.54       5.51    1.035  '/nfs/home/myuecel3/Frontiers_MedChem/data/output/gold_docking_step1/mol_10/gold_soln_prep_ligand_10_m1_5.mol2'        'RDKit          3D'

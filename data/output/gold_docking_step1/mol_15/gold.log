@@ -1,0 +1,14 @@
+Beginning ligand file '/nfs/home/myuecel3/Frontiers_MedChem/data/output/gold_docking_step1/prep_ligand_15.mol2'
+Starting at ligand 1 (byte position 0) in file '/nfs/home/myuecel3/Frontiers_MedChem/data/output/gold_docking_step1/prep_ligand_15.mol2'
+Finishing at final ligand in file '/nfs/home/myuecel3/Frontiers_MedChem/data/output/gold_docking_step1/prep_ligand_15.mol2'
+Completed docking of ligand 1 in ligand file '/nfs/home/myuecel3/Frontiers_MedChem/data/output/gold_docking_step1/prep_ligand_15.mol2' in 0.352565 seconds
+
+Finished GOLD batch job, exiting..
+
+
+--------------------------------------------------------------------------------
+
+* Total run time :                                                              
+  total  2.4569 user  2.4320 sys  0.0249
+
+--------------------------------------------------------------------------------

@@ -62,16 +62,3 @@ params.smarts = [
     "[#8;!o][C;!$(C(=[O,N])[N,O])][#8;!o]",
     "[#16;!s][C;!$(C(=[O,N])[N,O])][#16;!s]"
 ]
-[[stage.scoring.component]]
-[stage.scoring.component.MolecularWeight]
-
-[[stage.scoring.component.MolecularWeight.endpoint]]
-name = "Molecular weight"  # user chosen name for output
-weight = 1  # weight to fine-tune the relevance of this component
-
-transform.type = "double_sigmoid"
-transform.high = 1200.0
-transform.low = 700.0
-transform.coef_div = 1200.0
-transform.coef_si = 20.0
-transform.coef_se = 20.0

@@ -1,0 +1,12 @@
+Fitness list for ligand file prep_ligand_11.mol2, molecule 1
+
+Mol No     Score     S(PLP)   S(hbond)     S(cho)   S(metal)  DE(clash)   DE(tors)     intcor     time
+
+  2        58.87     -56.58       1.00       0.00       0.00       0.00       0.40       0.09    0.045
+  3        58.55     -56.19       0.99       0.00       0.00       0.00       0.35       0.09    0.044
+  1        57.29     -55.69       1.00       0.00       0.00       0.00       0.75       0.09    0.000
+
+
+Average Values:
+
+           58.24     -56.15       1.00       0.00       0.00       0.00       0.50       0.09    0.030

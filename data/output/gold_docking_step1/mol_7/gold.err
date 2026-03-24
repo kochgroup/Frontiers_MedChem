@@ -1,0 +1,8 @@
+
+
+********************************************************************************
+Ligand in file /nfs/home/myuecel3/Frontiers_MedChem/data/output/gold_docking_step1/prep_ligand_7.mol2, named RDKit          3D,
+starting at address 0 raised the following warnings and/or errors
+Warning message: 
+set_atom_type: atom   11 in /nfs/home/myuecel3/Frontiers_MedChem/data/output/gold_docking_step1/prep_ligand_7.mol2 is type N.pl3 ; resetting to type   N.3
+

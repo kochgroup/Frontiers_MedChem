@@ -1,0 +1,16 @@
+
+
+********************************************************************************
+Ligand in file /nfs/home/myuecel3/Frontiers_MedChem/data/output/gold_docking_step1/prep_ligand_2.mol2, named RDKit          3D,
+starting at address 0 raised the following warnings and/or errors
+Warning message: 
+No torsional FF parameters for C.ar S.o2 N.2 C.2 torsion, bond type  1
+
+Warning message: 
+No torsional FF parameters for O.2 S.o2 N.2 C.2 torsion, bond type  1
+
+Warning message: 
+No torsional FF parameters for O.2 S.o2 N.2 C.2 torsion, bond type  1
+
+Warning message: 
+chemscore_get_bond_type: unknown bond type for bond 24-25

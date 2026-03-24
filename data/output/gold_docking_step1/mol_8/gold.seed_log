@@ -1,0 +1,92 @@
+# protein initialization seed
+seed 736521
+seed 751226
+# seeds for ligand 1
+seed 790186
+seed 804097
+seed 818120
+seed 832269
+seed 846900
+seed 862505
+seed 875133
+seed 895777
+# seeds for ligand 2
+seed 934901
+seed 950488
+seed 966400
+seed 982921
+seed 999173
+seed 15148
+seed 27429
+seed 45659
+# seeds for ligand 3
+seed 82959
+seed 96775
+seed 110290
+seed 123819
+seed 137363
+seed 151299
+seed 162759
+seed 203583
+# seeds for ligand 4
+seed 240545
+seed 254590
+seed 268091
+seed 281512
+seed 294912
+seed 308419
+seed 320111
+seed 346473
+# seeds for ligand 5
+seed 383625
+seed 397712
+seed 412243
+seed 427206
+seed 442211
+seed 457935
+seed 469970
+seed 493312
+# seeds for ligand 6
+seed 530158
+seed 543750
+seed 557227
+seed 571192
+seed 585539
+seed 600383
+seed 612044
+seed 637237
+# seeds for ligand 7
+seed 675721
+seed 690531
+seed 705353
+seed 720544
+seed 735455
+seed 750303
+seed 761827
+seed 788159
+# seeds for ligand 8
+seed 825345
+seed 839764
+seed 853920
+seed 868132
+seed 881770
+seed 895103
+seed 905634
+seed 936067
+# seeds for ligand 9
+seed 974598
+seed 989094
+seed 4510
+seed 19854
+seed 34345
+seed 48984
+seed 59915
+seed 95407
+# seeds for ligand 10
+seed 132348
+seed 146365
+seed 161065
+seed 175952
+seed 191599
+seed 207210
+seed 219118
